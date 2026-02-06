@@ -1,1 +1,14 @@
+Access:
+The data we found and will be using for our problem is publicly available.
 
+Sources:
+Dataset One - Respiratory-related hospitalization data
+Center for Disease Control
+
+Dataset Two - Air Quality Index data
+Environmental Protection Agency
+
+Both sources provide reliable, publicly available data from trusted government agencies.
+
+Relevance:
+Both datasets are directly needed to answer our problem statement. We will analyze the datasets above to answer our problem.
