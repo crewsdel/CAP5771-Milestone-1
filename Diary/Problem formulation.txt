@@ -1,2 +1,17 @@
-# Problem Statement
-Insert
+Problem Statement:
+
+At what AQI thresholds is there an increase in respiratory-related hospitalizations, and when might it be appropriate to issue public health advisories and make decision recommendations to public health agencies and officials?
+
+Problem Type: 
+Our problem intersects all of the types listed in the online textbook. Our problem seeks to PREDICT the thresholds at which AQI values correlate with increases in respiratory-related hospitalizations. It EXPLORES respiratory-related hospitalization data and AQI data to seek patterns between them. If a correlation is identified, our problem will propose possible RECOMMENDATIONS, such as resource allocation to health agencies and policy makers. The problem will serve as DECISION SUPPORT if a pattern is identified, possibly allocating limited ER resources and staffing, or when public advisories should be created.
+
+Context and Motivation: 
+This problem matters because an identified link between AQI thresholds and respiratory-related hospitalizations could inform advisories and resource allocation recommendations for at-risk populations and public health agencies.
+
+Variables: What information is required to make progress? Which variables act as inputs, and which represent outcomes?
+
+Viability:
+We have very realistic access to the data. The data we are accessing is public information and can easily be downloaded for acquisition and analysis within a reasonable timeframe.
+
+Ethics and Impact:
+We do not anticipate that solving this problem will introduce unintended consequences. We would not make any recommendations without first ensuring our results are accurate. We do not have any privacy concerns, given that the data we will use is publicly available.
