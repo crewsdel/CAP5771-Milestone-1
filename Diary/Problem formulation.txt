@@ -1,6 +1,5 @@
 Problem Statement:
-
-At what AQI thresholds is there an increase in respiratory-related hospitalizations, and when might it be appropriate to issue public health advisories and make decision recommendations to public health agencies and officials?
+At what AQI thresholds are there increases in short-term respiratory-related hospitalizations, and when might it be appropriate to issue public health advisories and make recommendations to public health agencies and officials?
 
 Problem Type: 
 Our problem intersects all of the types listed in the online textbook. Our problem seeks to PREDICT the thresholds at which AQI values correlate with increases in respiratory-related hospitalizations. It EXPLORES respiratory-related hospitalization data and AQI data to seek patterns between them. If a correlation is identified, our problem will propose possible RECOMMENDATIONS, such as resource allocation to health agencies and policy makers. The problem will serve as DECISION SUPPORT if a pattern is identified, possibly allocating limited ER resources and staffing, or when public advisories should be created.
@@ -8,7 +7,20 @@ Our problem intersects all of the types listed in the online textbook. Our probl
 Context and Motivation: 
 This problem matters because an identified link between AQI thresholds and respiratory-related hospitalizations could inform advisories and resource allocation recommendations for at-risk populations and public health agencies.
 
-Variables: What information is required to make progress? Which variables act as inputs, and which represent outcomes?
+Inputs:
+- Daily air quality data (AQI data)
+- Weekly respiratory hospitalization counts
+- Location data
+- Time (date/week)
+
+Outputs:
+- Trends and correlations between AQI and hospitalizations
+- Finding out which AQI thresholds are associated with increased health risks
+- Data showing potential lagged effects (e.g., high AQI levels result in increased hospitalizations over the following week(s)).
+
+Time horizon:
+We will utilize data from a multi-year historical analysis standpoint.
+  - Example: Data from 2015-2025.
 
 Viability:
 We have very realistic access to the data. The data we are accessing is public information and can easily be downloaded for acquisition and analysis within a reasonable timeframe.
