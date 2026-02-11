@@ -10,6 +10,7 @@ CDC Weekly Respiratory Data:
 [https://data.cdc.gov/...](https://data.cdc.gov/Public-Health-Surveillance/Weekly-Hospital-Respiratory-Data-HRD-Metrics-by-Ju/ua7e-t2fy/about_data)
 
 Raw files are not stored in this repository due to size constraints.
+
 Run:
 
 python scripts/download_aqi.py
