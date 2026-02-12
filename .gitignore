@@ -1,4 +1,7 @@
-# Ignore raw datasets
+# ignore all raw data
 data/raw/
-*.zip
-*.csv
+
+# allow processed outputs
+!data/processed/
+!data/processed/*.csv
+!data/processed/*.db
