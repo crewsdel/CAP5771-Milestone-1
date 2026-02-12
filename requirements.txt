@@ -2,3 +2,6 @@ A list of project dependencies with versions
 
 Pandas: 2.2.3
 NumPy: 2.0.2
+pandas
+
+numpy
