@@ -24,7 +24,7 @@ def download_year(year: int):
     print(f"Done year {year}")
 
 def main():
-    for y in range(2021, 2025):
+    for y in range(2021, 2026):
         download_year(y)
 
 if __name__ == "__main__":
