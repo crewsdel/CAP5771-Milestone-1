@@ -2,13 +2,28 @@ Access:
 The data we found and will be using for our problem is publicly available.
 
 Sources:
-  Dataset One - Respiratory-related hospitalization data
+  Dataset One - CDC NHSN “Weekly Hospital Respiratory Data (HRD) Metrics by Jurisdiction.”
   Center for Disease Control
+  - Contains weekly aggregated hospital respiratory admissions and capacity metrics at the state/territory level.
+  - We selected a subset of columns relevant to admissions: total COVID-19 admissions, total influenza admissions, total RSV admissions.
 
-  Dataset Two - Air Quality Index data
+  Dataset Two - EPA AQS AirData “Daily AQI by county” files (multiple years)
   Environmental Protection Agency
+  - Contains daily AQI values by county/state. We aggregate daily values to weekly state-level metrics.
+
+How We Obtained the Data:
+    We obtained the data via download from the respective websites online.
+
+How You Obtain the Data:
+    - Data is downloaded programmatically via scripts:
+        scripts/download_cdc_hrd.py downloads the CDC dataset as CSV.
+        scripts/download_epa_aqi_daily.py downloads and unzips annual EPA AirData files for daily AQI by county.
 
 Both sources provide reliable, publicly available data from trusted government agencies.
 
 Relevance:
-Both datasets are directly needed to answer our problem statement. Our variables taken as input will come directly from the two datasets.
+    Both datasets are directly needed to answer our problem statement. Our variables taken as input will come directly from the two datasets.
+    CDC provides weekly respiratory burden while EPA provides air quality exposure. Combined, they enable analysis of whether higher AQI weeks correspond to higher respiratory admissions.
+
+Constraints:
+    The EPA files are large and not stored in git. Raw data lives locally under data/raw/ and is reproducible via scripts.
