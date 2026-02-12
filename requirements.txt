@@ -5,3 +5,5 @@ NumPy: 2.0.2
 pandas
 
 numpy
+
+matplotlib
