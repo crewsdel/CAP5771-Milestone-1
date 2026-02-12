@@ -1,6 +1,17 @@
 # CAP5771-Milestone-1
 Project Milestone One for Intro to Data Science
 
+## Reproduce Everything Steps:
+1. Install deps: pip install -r requirements.txt
+2. Download raw data:
+   - python scripts/download_cdc_hrd.py
+   - python scripts/download_epa_aqi_daily.py
+3. Run the notebook milestone_1_code.ipynb to generate
+   - cdc_m1.csv
+   - aqi_m1.csv
+   - merged_m1.csv
+   - milestone1.db
+
 ## Data Acquisition
 
 EPA Daily AQI data can be downloaded from:
@@ -11,10 +22,5 @@ CDC Weekly Respiratory Data:
 
 Raw files are not stored in this repository due to size constraints.
 
-Run:
-
-python scripts/download_aqi.py
-python scripts/build_database.py
-
-to reproduce the database.
+We have included scripts to download the raw data to their appropriate files (see "Reproduce Everything Steps" above).
 
