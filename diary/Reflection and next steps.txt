@@ -1,1 +1,14 @@
+What went well:
+    - Successfully integrated two real-world datasets with different temporal resolutions (daily AQI vs weekly hospital data) by aggregating AQI to state-week and standardizing state naming.
 
+Challenges:
+    - Alignment issues (week ending timestamps, state naming conventions) required careful normalization and validation checks.
+
+Next steps (Milestone 2+):
+    - Consider lag effects (AQI from prior 1–3 weeks) and evaluate correlations.
+    - Control for seasonality and geography (baseline differences between states).
+    - Explore predictive framing: forecasting admissions using AQI metrics + seasonal features.
+    - Evaluate whether low days_reported weeks should be excluded or downweighted.
+
+Actionability:
+    - Results could inform health system planning during poor air quality periods and guide warnings/interventions for sensitive populations.
