@@ -1,1 +1,15 @@
+Row/Column counts:
+    - cdc_m1: ADD THIS
+    - aqi_m1: ADD THIS
+    - merged_m1: 13,080 rows x 10 columns
 
+
+Distributions TODO:
+    - TODO: Time series plot of total_respiratory_admissions over time
+    - TODO: Histogram of AQI metrics (aqi_mean, aqi_p90, aqi_max)
+    - TODO: Missingness rates for admissions fields and AQI coverage (days_reported)
+
+Missingness/anomalies TODO (If there is anything you think should be added):
+    - Some admission vals are missing (NaN) for certain weeks/states, especially early in the CDC time range
+    - days_reported varies. Low values indicate limited AQI reported coverage that week and should be considered in later modeling.
+    - We removed non-U.S. "Country Of Mexico" state entries from AQI aggregation prior to merging.
