@@ -1,1 +1,16 @@
+Database purpose:
+    - Store cleaned, integrated Milestone 1 tables in a single SQLite database for reproducibility and downstream analysis.
 
+Database engine:
+    - SQLite (single file: data/processed/milestone1.db)
+
+Tables:
+    - cdc_m1: weekly admissions by state (COVID/Influenza/RSV and total).
+    - aqi_m1: weekly AQI metrics by state (mean, p90, max, and days_reported).
+    - merged_m1: inner join of cdc_m1 and aqi_m1 on (state, week).
+
+Keys:
+    - Logical primary key for all three tables is (state, week).
+
+Implementation:
+    - Tables are written using pandas to_sql() function during the notebook run. The .db file is created automatically by SQLite if it does not exist.
