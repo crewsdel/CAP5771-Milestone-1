@@ -8,7 +8,8 @@ CDC_DATASET_ID = "ua7e-t2fy"
 CDC_CSV_URL = f"https://data.cdc.gov/resource/{CDC_DATASET_ID}.csv?$limit=20000"
 
 def main():
-    out_dir = Path("data/raw/CDC")
+    parent_dir = Path(__file__).parent.parent
+    out_dir = parent_dir / "data" / "raw" / "CDC"
     out_dir.mkdir(parents=True, exist_ok=True)
     out_path = out_dir / "cdc_raw.csv"
 

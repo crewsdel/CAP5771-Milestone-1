@@ -3,7 +3,8 @@ import zipfile
 import urllib.request
 
 BASE = "https://aqs.epa.gov/aqsweb/airdata/"
-OUT_DIR = Path("data/raw/AQI")
+PARENT_DIR = Path(__file__).parent.parent
+OUT_DIR = PARENT_DIR / "data" / "raw" / "AQI"
 
 def download_year(year: int):
     OUT_DIR.mkdir(parents=True, exist_ok=True)
