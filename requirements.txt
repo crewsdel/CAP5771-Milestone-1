@@ -1,9 +1,3 @@
-A list of project dependencies with versions
-
-Pandas: 2.2.3
-NumPy: 2.0.2
-pandas
-
-numpy
-
-matplotlib
+pandas~=2.2.3
+numpy~=2.0.2
+matplotlib~=3.10.0
