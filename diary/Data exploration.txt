@@ -1,13 +1,17 @@
 Row/Column counts:
-    - cdc_m1: ADD THIS
-    - aqi_m1: ADD THIS
+    - cdc_m1: 19229 rows x 6 columns
+    - aqi_m1: 13,080 rows x 8 columns
     - merged_m1: 13,080 rows x 10 columns
 
+Statistics:
+    - Missingness statistics pertaining to missing rates (when values are recored as NaN or NULL) of applicable variables will be measured
+    - Skew statistics and Kurt statistics will be utilized to determine distribution shape and skew of all examined variables in the final dataset
 
-Distributions TODO:
-    - TODO: Time series plot of total_respiratory_admissions over time
-    - TODO: Histogram of AQI metrics (aqi_mean, aqi_p90, aqi_max)
-    - TODO: Missingness rates for admissions fields and AQI coverage (days_reported)
+Distributions:
+    - Histograms displaying simple summary statistics relating to values and their respective frequencies (counts)
+    - Total Admissions Over Time (plot of weeks vs. total respiratory admissions)
+    - AQI Mean Over Time (plot of weeks vs. aqi mean values)
+    - Extra: Total Admissions and AQI Mean Values over time for state of Florida (proof of concept over narrower scope)
 
 Missingness/anomalies TODO (If there is anything you think should be added):
     - Some admission vals are missing (NaN) for certain weeks/states, especially early in the CDC time range
