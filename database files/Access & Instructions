@@ -1,3 +1,10 @@
-Database File or Access Instructions
-
-The .db file or clear instructions on how to generate/access it
+Database File Creation Steps:
+1. Install deps: pip install -r requirements.txt
+2. Download raw data:
+   - python scripts/download_cdc_hrd.py
+   - python scripts/download_epa_aqi_daily.py
+3. Run the notebook milestone_1_code.ipynb to generate
+   - cdc_m1.csv
+   - aqi_m1.csv
+   - merged_m1.csv
+   - milestone1.db

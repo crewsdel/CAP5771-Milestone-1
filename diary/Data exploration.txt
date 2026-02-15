@@ -13,7 +13,7 @@ Distributions:
     - AQI Mean Over Time (plot of weeks vs. aqi mean values)
     - Extra: Total Admissions and AQI Mean Values over time for state of Florida (proof of concept over narrower scope)
 
-Missingness/anomalies TODO (If there is anything you think should be added):
+Missingness/anomalies:
     - Some admission vals are missing (NaN) for certain weeks/states, especially early in the CDC time range
     - days_reported varies. Low values indicate limited AQI reported coverage that week and should be considered in later modeling.
     - We removed non-U.S. "Country Of Mexico" state entries from AQI aggregation prior to merging.
