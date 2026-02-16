@@ -20,6 +20,9 @@ How do weekly air quality conditions (AQI) relate to weekly respiratory-related 
 - `database schema/schema.png`: database schema image
 - `data dictionary/`: contains our data dictionary PDF
 
+## Database File
+There is already a generated .db file in the /data/processed folder!
+You can find it there, or generate it yourself via the instructions below.
 
 ## Reproduce Everything Steps:
 1. Install deps: pip install -r requirements.txt
