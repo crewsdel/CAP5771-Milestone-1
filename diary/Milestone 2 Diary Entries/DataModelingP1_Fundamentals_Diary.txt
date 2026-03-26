@@ -1,5 +1,7 @@
 Which model(s) did you choose to try first, and why?
 
+We trained both a Linear Regression model as a baseline and a Random Forest model to capture nonlinear relationships between AQI and respiratory admissions.
+
 Explain your reasoning in terms of the problem type (regression vs classification), interpretability, complexity, and data size.
 
 What assumptions does your model make about the data?
