@@ -1,7 +1,24 @@
 What are the top data problems you decided to fix first, and why these first?
 
+The top data problems we decided to fix first were as follows:
+- Addressing duplicate values
+- Addressing missing values
+- Sorting the data
+
+These issues were fixed first as they were critical to address before attempting to create any model using our dataset.
+
 For each problem: what rule did you apply (drop, impute, normalize, convert, deduplicate) and why?
+
+Since there were no duplicates in our dataset, we did not have to apply any rules to address them.
+
+In order to address the issue of missing/null values in our dataset, several rules were applied. For rows in our dataset that were missing total_respiratory_admissions data, these rows were dropped as they failed to meet the minimum requirement for analysis for our investigation. Rows where no AQI values were reported that week were also dropped for the previously mentioned reason. When dealing with rows with null values for covid_admissions, influenza_admissions, or rsv_admissions, 0's were imputed in place of null to signify that there were no recorded hospitalizations for those features during the given week. This was done instead of dropping these rows completely as removing all rows with null values would result in a significant loss of data in our dataset.
+
+Data was sorted using built in pandas commands.
 
 Include at least one before vs after summary (counts, missingness table, value counts, or a small snippet).
 
+For a more comprehensive view of the data before and after addressing the issues with the dataset, please view the visualizations seen in data_wrangling.ipynb
+
 What risks remain? What choices might affect fairness, bias, or interpretation later?
+
+Although imputing missing data does help allivate the issue of null values in our dataset, it may be the case that imputing 0's for null might not be representative of what actually occured in real life. That said, since some hospitalization data was never reported we simply have no choice but to assume no hospitalizations were made as for the given admission types as assume any other value would hinder the validity of our investigation.

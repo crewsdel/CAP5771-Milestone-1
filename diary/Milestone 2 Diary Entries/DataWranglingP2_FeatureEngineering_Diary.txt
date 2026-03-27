@@ -1,5 +1,30 @@
 What features you engineered (or transformed), and why?
 
+Several features were engineered as a result of our model preparation. 
+
+Engineered features include:
+- year
+- month
+- week_of_year
+- aqi_mean_lag1
+- aqi_mean_lag2
+- aqi_p90_lag1
+- aqi_p90_lag2
+- aqi_max_lag1
+- aqi_max_lag2
+- aqi_mean_rolling3
+
+Simple features such as year, month, week_of_year, and quarter were engineered from the preexisting week timestamp in our dataset. Manufacturing more specific time features was important so that we could examine how the year, month, and week_of_year each have an impact on determining the total number of respiratory-related hospitalizations for a given state. 
+
+In regards to more complex features, AQI lag features were computed by grouping AQI data by states and shifting those values by either one or two weeks. An extra AQI mean feature was also derived by computing a rolling mean across a three week period. These features were important for our model as literature related to this topic highlights how hospitalziations related to poor air quality can have a delayed onset, meaning the result of one instance of poor AQI won't be seen for the next week or two.
+
 What did you remove during feature selection, and what is your justification (relevance/ethics/redundancy)?
 
+During feature selection the cateogry and defining_parameter features were removed as they were not relevant features that would assist our models in being able to predict the number of respiratory-related hospitalizations.
+
 Include at least one before vs after summary (value counts, distributions, correlation, or a small snippet).
+
+Shape of dataset prior to wrangling: (13080, 12)
+Shape of dataset after wrangling: (12974, 18)
+
+For a more comprehensive view of the data before and after wrangling, please view the visualizations seen in data_wrangling.ipynb
