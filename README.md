@@ -40,7 +40,7 @@ How do weekly air quality conditions (AQI) relate to weekly respiratory-related 
    - feature_importance.csv
    - milestone2.db
 
-## To run dashboard notebook
+## Run Dashboard Notebook
 Follow previously mentioned file reproduction steps. Once necessary files have been created simply run the data_visualization_static notebook to generate the interactive dashboard.
 
 ## Data Acquisition
