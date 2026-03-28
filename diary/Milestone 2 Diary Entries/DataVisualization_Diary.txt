@@ -1,0 +1,17 @@
+What is the main story or message your visualizations or article communicate?
+
+We designed a static dashboard notebook to clearly communicate our findings thus far in the project.
+The goal was to make the results easy to explore and understand without overwhelming the viewer.
+
+We included interactive widgets that allow the user to select a state, AQI metric, and model type.
+This makes it possible to explore how patterns vary across different regions and conditions.
+The dashboard includes time series plots, model prediction comparisons between Linear Regression and Random Forest, scatter plots, and feature importance charts.
+
+We focused on keeping the visuals simple, well-labeled, and tied to our main question.
+The dashboard helps demonstrate that AQI and recent air quality trends are meaningful predictors of respiratory admissions, and that the Random Forest model performs better than Linear Regression.
+
+Sketch of you dashboard or outline of your article sections
+
+The dashboard compares actual respiratory admissions with model predictions and visualizes how AQI conditions vary over time for each state in our dataset. Within the dashboad there is a scatter plot that help determine whether higher AQI is related with increased respiratory admissions for each state as well as feature importance charts which make note of which AQI and other features contributed the most towards model predictions.
+
+For a more detailed look of the dashboard, please view the visualizations seen in data_visualization_static.ipynb

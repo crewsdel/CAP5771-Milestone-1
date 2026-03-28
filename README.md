@@ -1,5 +1,5 @@
-# CAP5771-Milestone-1
-Project Milestone One for Intro to Data Science
+# CAP5771-Milestone-2
+Project Milestone Two for Intro to Data Science
 
 ## Overview:
 This project integrates U.S. air quality exposure data (EPA AQI) with weekly respiratory hospital admissions (CDC NHSN HRD) to support exploratory analysis of how air quality may relate to respiratory healthcare burden.
@@ -12,8 +12,12 @@ How do weekly air quality conditions (AQI) relate to weekly respiratory-related 
 - EPA AQS AirData (Daily AQI by county): downloaded via script (annual zip files).
 
 ## Repository Structure
-- `Code Implementation/milestone_1_code.ipynb`: end-to-end Milestone 1 workflow (acquisition → processing → database → exploration)
-- `diary/`: milestone documentation (5 stages)
+- `Code Implementation/`:
+    - `milestone_1_code.ipynb`:end-to-end Milestone 1 workflow (acquisition → processing → database → exploration)
+    - `data_wrangling.ipynb`: full dataset cleaning, validating, and feature engineering
+    - `data_modeling.ipynb`: regression model preprocessing, creation, and results comparisons
+    - `data_visualization_static.ipynb`: dashboard visualizations that highlight key findings regarding the relationship between AQI and respiratory-related hospital admissions
+- `diary/`: milestone documentation (5 entries for each milestone)
 - `data/raw/`: raw datasets (NOT committed; reproducible via scripts)
 - `data/processed/`: processed tables + SQLite database (committed)
 - `scripts/`: download + documentation artifact generators
@@ -29,11 +33,19 @@ You can find it there, or generate it yourself via the instructions below.
 2. Download raw data:
    - python scripts/download_cdc_hrd.py
    - python scripts/download_epa_aqi_daily.py
-3. Run the notebook milestone_1_code.ipynb to generate
+3. (Milestone 1 outputs) Run the notebook milestone_1_code.ipynb to generate
    - cdc_m1.csv
    - aqi_m1.csv
    - merged_m1.csv
    - milestone1.db
+4. (Milestone 2 outputs) Run the notebooks data_wrangling.ipynb, data_modeling.ipynb, and data_visualization_static to generate
+   - modeling_dataset.csv
+   - model_predictions.csv
+   - feature_importance.csv
+   - milestone2.db
+
+## Run Dashboard Notebook
+Follow previously mentioned file reproduction steps. Once necessary files have been created simply run the data_visualization_static notebook to generate the interactive dashboard.
 
 ## Data Acquisition
 EPA Daily AQI data can be downloaded from:
