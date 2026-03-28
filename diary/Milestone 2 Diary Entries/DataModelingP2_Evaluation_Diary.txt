@@ -1,0 +1,18 @@
+What evaluation metrics did you choose and why are they appropriate for your problem?
+
+To evaluate our models, we chose metrics such as MAE, RSME, and R-squared to evaluate the performance of our models. These metrics were chosen as they as they allowed us to better examine the error in our models and determine which model would result in better predctions.
+
+How does your model compare to the baseline?
+
+We evaluated two models, Linear Regression and Random Forest, to predict weekly respiratory hospital admissions.
+Linear Regression performed poorly, with a R-squared value of 0.16, indicating that it was not able to capture the relationship between AQI and admissions effectively.
+This suggests that the relationship is not purely linear.
+
+The Random Forest model performed significantly better, achieving an R² of about 0.59 and much lower error values: about 173 and 360, respectively (MAE and RMSE).
+This indicates that the model was able to capture more complex, nonlinear patterns in the data.
+
+Overall, Random Forest was the better model choice for this problem.
+
+What does feature importance suggest about the patterns your model is using?
+
+From the feature importance tables created and general results from our models, we concluded that air quality does have predictive value for respiratory admissions, but the relationship is influenced by multiple factors and time-based effects. In other words, the patterns used by our models were complex and didn't rely on any one single feature to make respiratory hospital admissions predictions.
