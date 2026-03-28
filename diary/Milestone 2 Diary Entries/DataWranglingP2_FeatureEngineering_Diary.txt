@@ -20,7 +20,7 @@ In regards to more complex features, AQI lag features were computed by grouping 
 
 What did you remove during feature selection, and what is your justification (relevance/ethics/redundancy)?
 
-During feature selection the cateogry and defining_parameter features were removed as they were not relevant features that would assist our models in being able to predict the number of respiratory-related hospitalizations.
+During feature selection the category and defining_parameter features were removed as they were not relevant features that would assist our models in being able to predict the number of respiratory-related hospitalizations.
 
 Include at least one before vs after summary (value counts, distributions, correlation, or a small snippet).
 

@@ -1,0 +1,8 @@
+We evaluated two models, Linear Regression and Random Forest, to predict weekly respiratory hospital admissions.
+Linear Regression performed poorly, with a negative R-squared value of -0.88, indicating that it was not able to capture the relationship between AQI and admissions effectively.
+This suggests that the relationship is not purely linear.
+
+The Random Forest model performed significantly better, achieving an R² of about 0.59 and much lower error values: about 173 and 360, respectively (MAE and RMSE).
+This indicates that the model was able to capture more complex, nonlinear patterns in the data.
+
+From these results, we concluded that air quality does have predictive value for respiratory admissions, but the relationship is influenced by multiple factors and time-based effects. Overall, Random Forest was the better model choice for this problem

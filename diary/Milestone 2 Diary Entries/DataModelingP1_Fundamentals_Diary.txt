@@ -1,9 +1,8 @@
 We trained both a Linear Regression model as a baseline and a Random Forest model to capture nonlinear relationships between AQI and respiratory admissions.
 
-We chose a regression approach rather than classification because our goal is to predict the number of weekly respiratory hospital admissions, which is a continuous variable. A classification approach (such as predicting whether a “spike” occurs) would require defining an arbitrary threshold and would reduce the richness of the data by converting continuous values into binary labels. By using regression, we preserve more information and can better understand how changes in air quality relate to actual admission levels.
+We chose a regression approach rather than classification because our goal is to predict the number of weekly respiratory hospital admissions, which is a continuous variable. A classification approach would require defining an arbitrary threshold and would reduce the meaningfulness of the data by converting continuous values into binary labels. By using regression we're able to preserve more information and can better understand how changes in air quality relate to actual admission levels.
 
-The two models we used make different assumptions about the data.
-
+The two models we used make different assumptions about the data (see below).
 The Linear Regression model assumes:
 
 A linear relationship between predictors (AQI, time features) and the target variable (admissions)
@@ -11,16 +10,15 @@ A linear relationship between predictors (AQI, time features) and the target var
 - Constant variance of errors
 - Minimal multicollinearity between features
 
-In contrast, the Random Forest model makes fewer strict assumptions. It does not require linear relationships and can capture nonlinear patterns and interactions between variables. However, it assumes that:
-
+The Random Forest model makes fewer strict assumptions. It does not require linear relationships and can capture nonlinear patterns and interactions between variables.
+However, it assumes that:
 - The training data is representative of future data
 - There is enough data to learn meaningful patterns
 - Features contain useful predictive signal
 
 Because our data likely contains nonlinear relationships and temporal effects, Random Forest is better suited for this problem.
 
-What split will you decide for your train/validation/test? why?
-
 We used a time-based split rather than a random split. Specifically, we trained the model on the earlier 80% of the data and tested it on the most recent 20%.
 
-This approach was chosen because our data is time series in nature (weekly observations). A random split would mix past and future data, leading to data leakage, where the model indirectly learns from future information. This would result in overly optimistic performance estimates.
+This approach was chosen because our data is time series in nature (weekly observations and reports). A random split would mix past and future data, leading to data leakage, where the model indirectly learns from future information.
+This would result in overly optimistic performance estimates.
