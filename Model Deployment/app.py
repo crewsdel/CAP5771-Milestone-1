@@ -5,6 +5,11 @@ import pandas as pd
 from tensorflow import keras
 import json
 import requests
+import io
+import base64
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
 
 app = Flask(__name__)
 
@@ -23,8 +28,78 @@ feature_columns = [
 ]
 
 @app.route('/')
-def home():
-    return render_template('app.html')
+def tool():
+    return render_template('tool.html')
+
+@app.route('/visualizations')
+def visualizations():
+    return render_template('visualizations.html')
+
+def fig_to_base64(fig):
+    buf = io.BytesIO()
+    fig.savefig(buf, format='png', bbox_inches='tight')
+    buf.seek(0)
+    img_base64 = base64.b64encode(buf.read()).decode('utf-8')
+    buf.close()
+    plt.close(fig)
+    return img_base64
+
+model_df = pd.read_csv("csv/modeling_dataset.csv")
+pred_df = pd.read_csv("csv/model_predictions.csv")
+feature_importance = pd.read_csv("csv/feature_importance.csv")
+
+model_df["week"] = pd.to_datetime(model_df["week"])
+pred_df["week"] = pd.to_datetime(pred_df["week"])
+
+@app.route('/charts', methods=['POST'])
+def charts():
+    try:
+        data = request.get_json()
+        state = data['state']
+        model_col = data['model']
+        aqi_metric = data['aqi_metric']
+
+        state_pred = pred_df[pred_df["state"] == state].copy()
+        state_model = model_df[model_df["state"] == state].copy()
+
+        fig1, ax1 = plt.subplots()
+        ax1.plot(state_pred["week"], state_pred["total_respiratory_admissions"], label="Actual")
+        ax1.plot(state_pred["week"], state_pred[model_col], label="Predicted")
+        ax1.set_title(f"{state}: Actual vs Predicted")
+        ax1.set_xlabel("Week")
+        ax1.set_ylabel("Admissions")
+        ax1.legend()
+        plt.xticks(rotation=45)
+
+        fig2, ax2 = plt.subplots()
+        ax2.scatter(state_model[aqi_metric], state_model["total_respiratory_admissions"])
+        ax2.set_title(f"{state}: {aqi_metric} vs Admissions")
+        ax2.set_xlabel(aqi_metric)
+        ax2.set_ylabel("Total Respiratory Admissions")
+
+        fig3, ax3 = plt.subplots()
+        ax3.plot(state_model["week"], state_model[aqi_metric])
+        ax3.set_title(f"{state}: {aqi_metric} Over Time")
+        ax3.set_xlabel("Week")
+        ax3.set_ylabel("AQI")
+        plt.xticks(rotation=45)
+
+        fig4, ax4 = plt.subplots()
+        top_features = feature_importance.head(10)
+        ax4.barh(top_features["feature"], top_features["importance"])
+        ax4.invert_yaxis()
+        ax4.set_title("Top 10 Feature Importances")
+        ax4.set_xlabel("Importance")
+
+        return jsonify({
+            'actual_vs_predicted': fig_to_base64(fig1),
+            'scatter':             fig_to_base64(fig2),
+            'aqi_over_time':       fig_to_base64(fig3),
+            'feature_importance':  fig_to_base64(fig4),
+        })
+    
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
 
 def to_float(val):
     try:
@@ -110,7 +185,7 @@ def predict():
     llm_response = call_ollama(prompt)
 
     return jsonify({
-        'total_cases': round(total_cases, 4),
+        'total_cases': round(total_cases, 0),
         'llm_response': llm_response
     })
 

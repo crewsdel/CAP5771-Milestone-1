@@ -34,11 +34,20 @@ html, body {
 .left-container {
   display: flex;
   flex-direction: column;
-  width: 56%;
+  width: 55%;
   padding: 10px 20px 10px 20px;
   overflow-y: auto;
   background-color: #F1F5F9;
   border-right: 1px solid #E2E8F0;
+}
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.visualizations-button {
+  background-color: #CFE2FF;
 }
 
 .inputs-title {
@@ -183,28 +192,56 @@ html, body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 36%;
+  width: 45%;
   padding: 10px;
+  position: relative;
 }
 
-.prediction-container {
-  display: flex;
+.prediction-value-container {
+  display: none;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 100%;
-  height: 50%;
+  height: 40%;
+}
+
+.prediction-value-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #1E293B;
+  margin-bottom: 10px;
+}
+
+.prediction-value {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  padding: 10px;
+  border-radius: 8px;
+  color: #0D6EFD;
+  font-size: 28px;
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+
+.prediction-llm-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
 }
 
 .prediction-llm {
   display: none;
   justify-content: center;
-  align-items: center;
   width: 90%;
   padding: 15px 20px;
   background-color: #CFE2FF;
   border-radius: 8px;
   color: #0D6EFD;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.5;
 }
 
@@ -215,9 +252,12 @@ html, body {
 }
 
 .loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
-  flex: 1;
   align-items: center;
   justify-content: center;
   gap: 12px;
