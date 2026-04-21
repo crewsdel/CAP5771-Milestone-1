@@ -52,10 +52,13 @@ You can find it there, or generate it yourself via the instructions below.
    - milestone2.db
 
 ## Run Dashboard Notebook (Milestone 2)
-Follow the previously mentioned file reproduction steps. Once the necessary files have been created, simply run the data_visualization_static notebook to generate the interactive dashboard.
+Follow the previously mentioned steps for reproducing the file. Once the necessary files have been created, run the data_visualization_static notebook to generate the interactive dashboard.
 
 ## Build and Deploy the Prediction Tool (Milestone 3)
-Follow the previously mentioned file reproduction steps. After the necessary files have been created, run the app.py file found in the Model Deployment folder.
+Follow the previously mentioned steps for reproducing the file. After the necessary files have been created, run the app.py file found in the Model Deployment folder.
+
+## Deployment Videos (Milestone 3)
+There are two files with links in the videos/ directory. One video walks through the code implementation of our tool, and the other is a demo of the tool. To watch, simply copy and paste the links into your preferred browser.
 
 ## Data Acquisition
 EPA Daily AQI data can be downloaded from:
