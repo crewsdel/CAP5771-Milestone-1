@@ -1,8 +1,8 @@
-# CAP5771-Milestone-2
-Project Milestone Two for Intro to Data Science
+# CAP5771-Milestone-3
+Project Milestone Three for Intro to Data Science
 
 ## Overview:
-This project integrates U.S. air quality exposure data (EPA AQI) with weekly respiratory hospital admissions (CDC NHSN HRD) to support exploratory analysis of how air quality may relate to respiratory healthcare burden.
+This project integrates U.S. air quality exposure data (EPA AQI) with weekly respiratory hospital admissions (CDC NHSN HRD) to support exploratory analysis of how air quality may relate to respiratory healthcare burden. For Milestone 3, we decided to create and deploy a tool that predicts the number of respiratory-related hospitalizations based on daily AQI values entered by the user.
 
 ## Main Question:
 How do weekly air quality conditions (AQI) relate to weekly respiratory-related hospital admissions (COVID-19, Influenza, RSV) across U.S. states from 2021–2025?
