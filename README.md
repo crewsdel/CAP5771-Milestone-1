@@ -23,7 +23,7 @@ How do weekly air quality conditions (AQI) relate to weekly respiratory-related 
     - `static`: images and styling for the tool
     - `templates`: HTML files for the structure of the web pages
     - `app.py`: Python file to generate and deploy the complete prediction tool
-- `diary/`: milestone documentation (5 entries for each milestone)
+- `diary/`: milestone documentation
 - `data/raw/`: raw datasets (NOT committed; reproducible via scripts)
 - `data/processed/`: processed tables + SQLite database (committed)
 - `scripts/`: download + documentation artifact generators
