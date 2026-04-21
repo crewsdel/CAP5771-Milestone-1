@@ -29,6 +29,7 @@ How do weekly air quality conditions (AQI) relate to weekly respiratory-related 
 - `scripts/`: download + documentation artifact generators
 - `database schema/schema.png`: database schema image
 - `data dictionary/`: contains our data dictionary PDF
+- `videos`: two folders containing unlisted links to the Milestone 3 videos
 
 ## Database File
 There is already a generated .db file in the /data/processed folder!
