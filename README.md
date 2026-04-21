@@ -18,11 +18,11 @@ How do weekly air quality conditions (AQI) relate to weekly respiratory-related 
     - `data_modeling.ipynb`: regression model preprocessing, creation, and results comparisons
     - `data_visualization_static.ipynb`: dashboard visualizations that highlight key findings regarding the relationship between AQI and respiratory-related hospital admissions
 - `Model Deployment/`:
-      - `cdc`: .csv files for the application
-      - `models`: our saved models
-      - `static`: images and styling for the tool
-      - `templates`: HTML files for the structure of the web pages
-      - `app.py`: Python file to generate and deploy the complete prediction tool
+    - `cdc`: .csv files for the application
+    - `models`: our saved models
+    - `static`: images and styling for the tool
+    - `templates`: HTML files for the structure of the web pages
+    - `app.py`: Python file to generate and deploy the complete prediction tool
 - `diary/`: milestone documentation (5 entries for each milestone)
 - `data/raw/`: raw datasets (NOT committed; reproducible via scripts)
 - `data/processed/`: processed tables + SQLite database (committed)
