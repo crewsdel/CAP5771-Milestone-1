@@ -1,0 +1,6 @@
+In this stage, we added an LLM component using Ollama to improve how results are communicated to the user.
+After generating a prediction, the app sends the result to a local language model, which produces a short explanation of what the prediction means.
+
+This makes the tool more user-friendly by translating numerical predictions into simple, understandable language.
+It also shows how machine learning models can be combined with LLMs to improve communication and usability.
+We were careful to make sure to include in our prompt that the Ollama model should not respond in a panicked manner or as a medical professional.

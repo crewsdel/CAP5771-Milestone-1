@@ -1,0 +1,5 @@
+In this stage, we focused on turning our model into a usable tool.
+We built a Flask application that allows users to input AQI values and receive a prediction for total respiratory hospitalizations.
+The app uses our trained random forest model, which performed best during our evaluation in Milestone 2.
+
+This step helped connect our earlier work to a real-world application, where users can actually interact with the model instead of just viewing results in a notebook.
