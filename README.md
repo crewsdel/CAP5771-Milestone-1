@@ -17,12 +17,19 @@ How do weekly air quality conditions (AQI) relate to weekly respiratory-related 
     - `data_wrangling.ipynb`: full dataset cleaning, validating, and feature engineering
     - `data_modeling.ipynb`: regression model preprocessing, creation, and results comparisons
     - `data_visualization_static.ipynb`: dashboard visualizations that highlight key findings regarding the relationship between AQI and respiratory-related hospital admissions
+- `Model Deployment/`:
+    - `csv`: .csv files for the application
+    - `models`: our saved models
+    - `static`: images and styling for the tool
+    - `templates`: HTML files for the structure of the web pages
+    - `app.py`: Python file to generate and deploy the complete prediction tool
 - `diary/`: milestone documentation (5 entries for each milestone)
 - `data/raw/`: raw datasets (NOT committed; reproducible via scripts)
 - `data/processed/`: processed tables + SQLite database (committed)
 - `scripts/`: download + documentation artifact generators
 - `database schema/schema.png`: database schema image
 - `data dictionary/`: contains our data dictionary PDF
+- `videos`: two folders containing unlisted links to the Milestone 3 videos
 
 ## Database File
 There is already a generated .db file in the /data/processed folder!
@@ -44,8 +51,11 @@ You can find it there, or generate it yourself via the instructions below.
    - feature_importance.csv
    - milestone2.db
 
-## Run Dashboard Notebook
-Follow previously mentioned file reproduction steps. Once necessary files have been created simply run the data_visualization_static notebook to generate the interactive dashboard.
+## Run Dashboard Notebook (Milestone 2)
+Follow the previously mentioned file reproduction steps. Once the necessary files have been created, simply run the data_visualization_static notebook to generate the interactive dashboard.
+
+## Build and Deploy the Prediction Tool (Milestone 3)
+Follow the previously mentioned file reproduction steps. After the necessary files have been created, run the app.py file found in the Model Deployment folder.
 
 ## Data Acquisition
 EPA Daily AQI data can be downloaded from:
