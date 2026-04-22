@@ -55,7 +55,14 @@ You can find it there, or generate it yourself via the instructions below.
 Follow the previously mentioned steps for reproducing the file. Once the necessary files have been created, run the data_visualization_static notebook to generate the interactive dashboard.
 
 ## Build and Deploy the Prediction Tool (Milestone 3)
-Follow the previously mentioned steps for reproducing the file. After the necessary files have been created, run the app.py file found in the Model Deployment folder.
+To run the tool locally, follow the previously mentioned steps for reproducing the file. After the necessary files have been created, run the app.py file found in the Model Deployment folder. To get the LLM responses locally, ensure you have install the phi3 model on Ollama and have it running. (Example command: ollama run phi3)
+
+## Deployed Tool
+The online deployed tool can be found at:  
+
+https://respiratory-hospitalization-prediction-tool.up.railway.app/  
+
+NOTE: Since Ollama is designed to run on local machines, it is not able to generate responses on the online version of the prediction tool. That said, all other application functionality is in tact. To experience the prediction with LLM integration, please follow the previous steps to run the application locally.
 
 ## Deployment Videos (Milestone 3)
 There are two files with links in the videos/ directory. One video walks through the code implementation of our tool, and the other is a demo of the tool. To watch, simply copy and paste the links into your preferred browser.
