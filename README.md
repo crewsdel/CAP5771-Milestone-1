@@ -55,7 +55,23 @@ You can find it there, or generate it yourself via the instructions below.
 Follow the previously mentioned steps for reproducing the file. Once the necessary files have been created, run the data_visualization_static notebook to generate the interactive dashboard.
 
 ## Build and Deploy the Prediction Tool (Milestone 3)
-To run the tool locally, follow the previously mentioned steps for reproducing the file. After the necessary files have been created, run the app.py file found in the Model Deployment folder. To get the LLM responses locally, ensure you have install the phi3 model on Ollama and have it running. (Example command: ollama run phi3)
+To run the tool locally, follow the previously mentioned steps for reproducing the file. After the necessary files have been created, run the app.py file found in the Model Deployment folder. To get the LLM responses locally, ensure you have install the phi3 model on Ollama and have it running.  
+
+Example setup:
+
+Navigate to the model deployment folder.
+
+In one terminal start the application by running:
+```
+python3 app.py
+```
+
+In another terminal run:
+```
+ollama run phi3
+```
+
+After running those commands the prediction tool should start running locally.
 
 ## Deployed Tool
 The online deployed tool can be found at:  
