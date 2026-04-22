@@ -73,7 +73,7 @@ ollama run phi3
 
 After running those commands the prediction tool should start running locally.
 
-## Deployed Tool
+## Deployed Tool (Milestone 3)
 The online deployed tool can be found at:  
 
 https://respiratory-hospitalization-prediction-tool.up.railway.app/  
