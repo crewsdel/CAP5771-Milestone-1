@@ -62,7 +62,7 @@ The online deployed tool can be found at:
 
 https://respiratory-hospitalization-prediction-tool.up.railway.app/  
 
-NOTE: Since Ollama is designed to run on local machines, it is not able to generate responses on the online version of the prediction tool. That said, all other application functionality is intact. To experience the prediction with LLM integration, please follow the previous steps to run the application locally.
+NOTE: Since Ollama is designed to run on local machines, it is not able to generate responses on the online version of the prediction tool. That said, all other application functionality is intact. To experience the prediction tool with LLM integration, please follow the previous steps to run the application locally.
 
 ## Deployment Videos (Milestone 3)
 There are two files with links in the videos/ directory. One video walks through the code implementation of our tool, and the other is a demo of the tool. To watch, simply copy and paste the links into your preferred browser.
